@@ -54,27 +54,27 @@ for ($i=0 ; $i<count($dataemails); $i++){
         <div class="container" >
                         <center><h1 class="display-4" style="border-bottom: 2px solid green;"> NOT SPAM COUNT </h1></center>
         <table class="table table-hover table-dark table-bordered table-striped">
-            <thead>
+            <thead style="position: sticky;top: 0;">
                 <tr>
-                    <th scope="col">S. No</th>
-                    <th scope="col">Email Id</th>
-                    <th scope="col">Inbox</th>
-                    <th scope="col">All mails</th>
-                    <th scope="col">Drafts</th>
-                    <th scope="col">Important</th>
-                    <th scope="col">Sent</th>
-                    <th scope="col">Spam</th>
-                    <th scope="col">Starred</th>
-                    <th scope="col">Trash</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">S. No</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Email Id</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Inbox</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">All mails</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Drafts</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Important</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Sent</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Spam</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Starred</th>
+                    <th class="lead" scope="col" style="position: sticky;top: 0; background-color:black;">Trash</th>
                 </tr>
             </thead>
             <tbody>
                    <?php for ($i = 0; $i < count($dataemails)-1; $i++) { ?>
                             <tr>
                                 <th scope="row" class="lead"><?php echo $i +1 ?></th>
-                                <td><?php echo $emails[$i] ?></td>
+                                <td class="lead" ><?php echo $emails[$i] ?></td>
                                     <?php foreach ($dataemails[$i] as $value1) {?>
-                                    <td><?php echo $value1 ?></td>
+                                    <td class="lead"><?php echo $value1 ?></td>
                                     
                                     <?php } ?>
                             </tr>
@@ -82,17 +82,17 @@ for ($i=0 ; $i<count($dataemails); $i++){
             </tbody>
         </table>
         </div>
-        <div class="container">
+        <div class="container lead">
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr>
-                    <th class="bg-success text-white"> Total inbox count </td>
-                    <th class="bg-danger text-white"> Total spam count </td>
+                <b><th class="bg-success text-white lead"> Total inbox count </td></b>
+                    <th class="bg-danger text-white lead"> Total spam count </td>
                 </tr>
                 </thead>
                 <tr>
-                    <td class="bg-success text-white"><?php echo $inboxcount ?></td>
-                    <td class="bg-danger text-white"><?php echo $spamcount ?></td>
+                    <td class="bg-success text-white lead"><?php echo $inboxcount ?></td>
+                    <td class="bg-danger text-white lead"><?php echo $spamcount ?></td>
                 </tr>
             </table>
         </div>
